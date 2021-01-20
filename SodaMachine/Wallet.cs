@@ -15,12 +15,10 @@ namespace SodaMachine
         public Wallet()
         {
             Coins = new List<Coin>();
-            Coin penny = new Coin();
-            Coin nickel = new Coin();
-            Coin dime = new Dime();
-            Coin quarter = new Quarter();
-
-
+            Coin penny = new Coin(); //added
+            Coin nickel = new Coin(); //aded
+            Coin dime = new Dime(); //added
+            Coin quarter = new Quarter(); //added
 
             FillRegister();
         }
@@ -28,7 +26,39 @@ namespace SodaMachine
         //Fills wallet with starting money
         private void FillRegister()
         {
-          
+            for (int startingPennyCount = 0; startingPennyCount < 50; startingPennyCount++)
+            {
+                if
+                   (startingPennyCount < 50)
+                    startingPennyCount++;
+            }
+            
+            for (int startingNickelCount = 0; startingNickelCount < 20; startingNickelCount++)
+            {
+                if
+                    (startingNickelCount < 20)
+                    startingNickelCount++;
+            }
+            
+            for (int startingDimeCount = 0; startingDimeCount < 10; startingDimeCount++)
+            {
+                if
+                    (startingDimeCount < 10)
+                    startingDimeCount++;
+            }
+           
+            for (int startingQuarterCount = 0; startingQuarterCount < 20; startingQuarterCount++)
+            {
+                if
+                    (startingQuarterCount < 20)
+                    startingQuarterCount++;
+            }
+
+
+
+
+
+
         }
     }
 }

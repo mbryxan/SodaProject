@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SodaMachine
+namespace SodaMachine 
 {
-    class SodaMachine
+    class  SodaMachine 
     {
         //Member Variables (Has A)
         private List<Coin> _register;
@@ -62,7 +62,6 @@ namespace SodaMachine
         public void FillRegister() //loop
         {
             //determine starting amount for each coins
-
 
             //add 50 pennies (50 x .01)
             for (int startingPennyCount = 0; startingPennyCount < 50; startingPennyCount++)
@@ -180,7 +179,7 @@ namespace SodaMachine
         {
 
         }
-        //Takes in a list of coins to returnt he total value of the coins as a double.
+        //Takes in a list of coins to return the total value of the coins as a double.
         private double TotalCoinValue(List<Coin> payment)
         {
 
