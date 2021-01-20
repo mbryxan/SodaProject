@@ -16,6 +16,7 @@ namespace SodaMachine
         public Customer()
         {
             Wallet = new Wallet();
+
             Backpack = new Backpack();
         }
         //Member Methods (Can Do)

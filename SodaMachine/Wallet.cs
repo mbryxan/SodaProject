@@ -15,6 +15,13 @@ namespace SodaMachine
         public Wallet()
         {
             Coins = new List<Coin>();
+            Coin penny = new Coin();
+            Coin nickel = new Coin();
+            Coin dime = new Dime();
+            Coin quarter = new Quarter();
+
+
+
             FillRegister();
         }
         //Member Methods (Can Do)

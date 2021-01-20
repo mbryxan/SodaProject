@@ -10,10 +10,16 @@ namespace SodaMachine
     {
         //Member Variables (Has A)
         public List<Can> cans;
+
+
         //Constructor (Spawner)
-        public Backpack()
+        public  Backpack()
         {
             cans = new List<Can>();
+            Can cola = new Can();
+            Can orangeSoda = new Can();
+            Can rootBeer = new Can();
+
         }
 
         //Member Methods (Can Do)
