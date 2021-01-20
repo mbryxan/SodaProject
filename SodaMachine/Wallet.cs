@@ -15,10 +15,10 @@ namespace SodaMachine
         public Wallet()
         {
             coins = new List<Coin>();
-            Coin penny = new Coin(); //added
-            Coin nickel = new Coin(); //aded
-            Coin dime = new Dime(); //added
-            Coin quarter = new Quarter(); //added
+            //Coin penny = new Coin(); //added
+            //Coin nickel = new Coin(); //aded
+            //Coin dime = new Dime(); //added
+            //Coin quarter = new Quarter(); //added
 
             FillWallet();
         }
@@ -26,41 +26,33 @@ namespace SodaMachine
         //Fills wallet with starting money
         private void FillWallet()
         {
-            for (int startingPennyCount = 0; startingPennyCount < 50; startingPennyCount++)
+            for (int i = 0; i < 4; i++)
             {
-                if
-                   (startingPennyCount < 50)
-                    startingPennyCount++;
-            }
-            
-            for (int startingNickelCount = 0; startingNickelCount < 20; startingNickelCount++)
-            {
-                if
-                    (startingNickelCount < 20)
-                    startingNickelCount++;
-            }
-            
-            for (int startingDimeCount = 0; startingDimeCount < 10; startingDimeCount++)
-            {
-                if
-                    (startingDimeCount < 10)
-                    startingDimeCount++;
-            }
-           
-            for (int startingQuarterCount = 0; startingQuarterCount < 20; startingQuarterCount++)
-            {
-                if
-                    (startingQuarterCount < 20)
-                    startingQuarterCount++;
+                Penny penny = new Penny();
+                coins.Add(penny);
             }
 
+            for (int i = 0; i < 2; i++)
+            {
+                Nickel nickel = new Nickel();
+                coins.Add(nickel);
+            }
 
+            for (int i = 0; i < 3; i++)
+            {
+                Dime dime = new Dime();
+                coins.Add(dime);
+            }
 
+            for (int i = 0; i < 3; i++)
+            {
+                Quarter quarter = new Quarter();
+                coins.Add(quarter);
 
-
-
+            }
         }
-    }
+       
+    } 
 }
 
  

@@ -16,7 +16,7 @@ namespace SodaMachine
         //Constructor (Spawner)
         public SodaMachine()
         {
-            _register = new List<Coin>(); //added
+            _register = new List<Coin>(); 
             _inventory = new List<Can>();
         }
 
