@@ -11,48 +11,13 @@ namespace SodaMachine
         //Member Variables (Has A)
         private List<Coin> _register;
         private List<Can> _inventory;
-        private int startingPennyCount;//added
-        private int startingNickelCount; //added
-        private int startingDimeCount; //added
-        private int startingQuarterCount; //added
-        private int startingColaCount; //added
-        private int startingOrangeSodaCount; //added
-        private int startingRootBeerCount; //added
+       
 
         //Constructor (Spawner)
         public SodaMachine()
         {
             _register = new List<Coin>(); //added
-            Coin penny = new Coin();
-            Coin nickel = new Coin();
-            Coin dime = new Coin();
-            Coin quarter = new Coin();
-
-            _register.Add(penny);
-            _register.Add(nickel);
-            _register.Add(dime);
-            _register.Add(quarter);
-
             _inventory = new List<Can>();
-            Can cola = new Can(); //added
-            Can orangeSoda = new Can();
-            Can rootBeer = new Can();
-
-            _inventory.Add(cola);
-            _inventory.Add(orangeSoda);
-            _inventory.Add(rootBeer);
-
-            //starting inventory for coins in machine
-            startingPennyCount = 0;
-            startingNickelCount = 0;
-            startingDimeCount = 0;
-            startingQuarterCount = 0;
-            //starting inventory for cans in machine
-            startingColaCount = 0;
-            startingOrangeSodaCount = 0;
-            startingRootBeerCount = 0;
-
-            //added
         }
 
         //Member Methods (Can Do)
@@ -61,60 +26,54 @@ namespace SodaMachine
 
         public void FillRegister() //loop
         {
-            //determine starting amount for each coins
-
+            
             //add 50 pennies (50 x .01)
-            for (int startingPennyCount = 0; startingPennyCount < 50; startingPennyCount++)
+            for (int i = 0; i < 50; i++)
             {
-                if
-                   (startingPennyCount < 50)
-                    startingPennyCount++;
+                Penny penny = new Penny();
+                _register.Add(penny);
             }
             //add 20 nickels (20 x .05)
-            for (int startingNickelCount = 0; startingNickelCount < 20; startingNickelCount++)
+            for (int i = 0; i < 20; i++)
             {
-                if
-                    (startingNickelCount < 20)
-                    startingNickelCount++;
+                Nickel nickel = new Nickel();
+                _register.Add(nickel);
             }
             //add 10 dimes (10 x.10)
-            for (int startingDimeCount = 0; startingDimeCount < 10; startingDimeCount++)
+            for (int i =0; i <10; i++)
             {
-                if
-                    (startingDimeCount < 10)
-                    startingDimeCount++;
+                Dime dime = new Dime();
+                _register.Add(dime);
             }
             //add 20 quarters (20 x .25)
-            for (int startingQuarterCount = 0; startingQuarterCount < 20; startingQuarterCount++)
+            for (int i = 0; i < 20; i++)
             {
-                if
-                    (startingQuarterCount < 20)
-                    startingQuarterCount++;
+                Quarter quarter = new Quarter();
+                _register.Add(quarter);
             }
-
         }
 
         //A method to fill the sodamachines inventory with soda can objects.
         public void FillInventory() //loop
 
-        //add 10 sodas
+            //add 10 cola
         {
-            for (int startingColaCount = 0; startingColaCount < 10; startingColaCount++)
+            for (int i = 0; i < 10; i++)
             {
-                if (startingColaCount < 20)
-                    startingColaCount++;
+                Cola cola = new Cola();
+                _inventory.Add(cola);
             }
-            //add 15 orangeSoda
-            for (int startingOrangeSodaCount = 0; startingOrangeSodaCount < 15; startingOrangeSodaCount++)
+            //add 15 OrangeSoda
+            for (int i = 0; i < 50; i++)
             {
-                if (startingOrangeSodaCount < 20)
-                    startingOrangeSodaCount++;
+                OrangeSoda orangeSoda = new OrangeSoda();
+                _inventory.Add(orangeSoda);
             }
-            //add 10 rootBeer
-            for (int startingRootBeerCount = 10; startingRootBeerCount < 10; startingRootBeerCount++)
+            //add 10 RootBeer
+            for (int i = 0; i < 50; i++)
             {
-                if (startingRootBeerCount < 10)
-                    startingRootBeerCount++;
+                RootBeer rootbeer = new RootBeer();
+                _inventory.Add(rootbeer);
             }
         }
 

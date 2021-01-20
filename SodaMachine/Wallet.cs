@@ -9,22 +9,22 @@ namespace SodaMachine
     class Wallet
     {
         //Member Variables (Has A)
-        public List<Coin> Coins;
+        public List<Coin> coins;
 
         //Constructor (Spawner)
         public Wallet()
         {
-            Coins = new List<Coin>();
+            coins = new List<Coin>();
             Coin penny = new Coin(); //added
             Coin nickel = new Coin(); //aded
             Coin dime = new Dime(); //added
             Coin quarter = new Quarter(); //added
 
-            FillRegister();
+            FillWallet();
         }
         //Member Methods (Can Do)
         //Fills wallet with starting money
-        private void FillRegister()
+        private void FillWallet()
         {
             for (int startingPennyCount = 0; startingPennyCount < 50; startingPennyCount++)
             {
