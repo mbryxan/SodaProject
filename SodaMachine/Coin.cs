@@ -11,15 +11,15 @@ namespace SodaMachine
         //Member Variables (Has A)
         protected double value;
         public string Name;
-        public double Value; //added
-
+        
+        //properties
         public double Value
         {
             get
             {
                 return value;
             }
-
+           
 
         }
         //Constructor (Spawner)

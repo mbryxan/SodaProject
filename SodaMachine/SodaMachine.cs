@@ -58,19 +58,19 @@ namespace SodaMachine
 
             //add 10 cola
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 20; i++)
             {
                 Cola cola = new Cola();
                 _inventory.Add(cola);
             }
             //add 15 OrangeSoda
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 5; i++)
             {
                 OrangeSoda orangeSoda = new OrangeSoda();
                 _inventory.Add(orangeSoda);
             }
             //add 10 RootBeer
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 5; i++)
             {
                 RootBeer rootbeer = new RootBeer();
                 _inventory.Add(rootbeer);
@@ -98,10 +98,16 @@ namespace SodaMachine
         }
         //Gets a soda from the inventory based on the name of the soda.
         private Can GetSodaFromInventory(string nameOfSoda)
+
         {
-
+            foreach (Can can in _inventory) 
+            {
+                if (can.Name == nameOfSoda)
+                {
+                    _inventory.Remove(can);
+                }
+            }
         }
-
         //This is the main method for calculating the result of the transaction.
         //It takes in the payment from the customer, the soda object they selected, and the customer who is purchasing the soda.
         //This is the method that will determine the following:
@@ -111,6 +117,20 @@ namespace SodaMachine
         //If the payment does not meet the cost of the soda: dispense payment back to the customer.
         private void CalculateTransaction(List<Coin> payment, Can chosenSoda, Customer customer)
         {
+            if (chosenSoda.Name == "Cola")
+            {
+                //set payment to .50
+            }
+
+            else if (chosenSoda.Name == "OrangeSoda")
+            {
+                //set payment to .60
+            }
+
+            else (chosenSoda.Name == "RootBeer")
+            {
+                //set payment to .30
+            }
 
         }
         //Takes in the value of the amount of change needed.
@@ -118,14 +138,17 @@ namespace SodaMachine
         //Returns the list of coins as change to despense.
         //If the change cannot be made, return null.
         private List<Coin> GatherChange(double changeValue)
+
         {
 
         }
         //Reusable method to check if the register has a coin of that name.
         //If it does have one, return true.  Else, false.
         private bool RegisterHasCoin(string name)
-        {
 
+
+        {
+            
         }
         //Reusable method to return a coin from the register.
         //Returns null if no coin can be found of that name.

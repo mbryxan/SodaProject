@@ -16,9 +16,7 @@ namespace SodaMachine
         public  Backpack()
         {
             cans = new List<Can>();
-            Can cola = new Can();
-            Can orangeSoda = new Can();
-            Can rootBeer = new Can();
+            
 
         }
 

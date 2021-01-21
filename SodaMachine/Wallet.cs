@@ -26,25 +26,25 @@ namespace SodaMachine
         //Fills wallet with starting money
         private void FillWallet()
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Penny penny = new Penny();
                 coins.Add(penny);
             }
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Nickel nickel = new Nickel();
                 coins.Add(nickel);
             }
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Dime dime = new Dime();
                 coins.Add(dime);
             }
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 20; i++)
             {
                 Quarter quarter = new Quarter();
                 coins.Add(quarter);
