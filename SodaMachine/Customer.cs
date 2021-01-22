@@ -29,26 +29,64 @@ namespace SodaMachine
            
             
         {
-          
+            List<Coin> finalCoins = new List<Coin>();
+            double price = selectedCan.Price;
+            while (true)
+            {
+                Console.WriteLine("\n");
+                Console.WriteLine("Enter -1- for Quarter");
+                Console.WriteLine("Enter -2- for Dime");
+                Console.WriteLine("Enter -3- for Nickel");
+                Console.WriteLine("Enter -4- for Penny");
+                Console.WriteLine("Enter -5- when finished to deposit payment");
+                int.TryParse(Console.ReadLine(), out int selection);
 
+                if (selection == 1)
+                {
+                    finalCoins.Add(GetCoinFromWallet("Quarter"));
+                }
+
+                if (selection == 5)
+                    return finalCoins;
+            }
         }
     //Returns a coin object from the wallet based on the name passed into it.
     //Returns null if no coin can be found
     public Coin GetCoinFromWallet(string coinName)
     {
-        //get coin from wallet based on item name
+            //get coin from wallet based on item name
+
+            foreach (Coin coin in Wallet.coins)
+            {
+                if (coin.Name == coinName)
+                {
+                    Wallet.coins.Remove(coin);
+                    return coin;
+                }
+            }
+            return null;
 
 
-
-    }
+        }
     //Takes in a list of coin objects to add into the customers wallet.
     public void AddCoinsIntoWallet(List<Coin> coinsToAdd)
     {
+            //like soda machine on bottom
+           
+            foreach (Coin coin in finalCoins)
+            {
+               if (coinsToAdd == "Quarter")
+                {
+                    Wallet.coins.Add(coin);
+                }
 
+            }
     }
     //Takes in a can object to add to the customers backpack.
     public void AddCanToBackpack(Can purchasedCan)
     {
+
+                Backpack.cans.Add(purchasedCan);
         
     }
 }
