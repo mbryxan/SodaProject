@@ -46,6 +46,20 @@ namespace SodaMachine
                     finalCoins.Add(GetCoinFromWallet("Quarter"));
                 }
 
+                if (selection == 2)
+                {
+                    finalCoins.Add(GetCoinFromWallet("Dime"));
+                }
+
+                if (selection == 3)
+                {
+                    finalCoins.Add(GetCoinFromWallet("Nickel"));
+                }
+
+                if (selection ==4)
+                    finalCoins.Add(GetCoinFromWallet("Penny"));
+
+
                 if (selection == 5)
                     return finalCoins;
             }
@@ -73,14 +87,26 @@ namespace SodaMachine
     {
             //like soda machine on bottom
            
-            foreach (Coin coin in finalCoins)
+            foreach (Coin coin in Wallet.coins)
             {
-               if (coinsToAdd == "Quarter")
+                if  (coin.Name == "Quarter")
+
+                {                
+                    Wallet.coins.Add(coin);
+                }
+                if (coin.Name == "Dime")
                 {
                     Wallet.coins.Add(coin);
                 }
-
-            }
+                if  (coin.Name == "Nickel")
+                {
+                    Wallet.coins.Add(coin);
+                }
+                if (coin.Name == "Penny")
+                {
+                    Wallet.coins.Add(coin);
+                }
+            }   
     }
     //Takes in a can object to add to the customers backpack.
     public void AddCanToBackpack(Can purchasedCan)

@@ -204,28 +204,30 @@ namespace SodaMachine
         //Puts a list of coins into the soda machines register.
         private void DepositCoinsIntoRegister(List<Coin> coins)
         {
-
-            Penny penny = new Penny();
-            _register.Add(penny);
+            foreach (Coin coin in _register)
 
 
+            {
+                if (coin.Name == "Penny")
+                {
+                    _register.Add(coin);
+                }
+                else if (coin.Name == "Nickel")
+                {
+                    _register.Add(coin);
+                }
+                else if (coin.Name == "Dime")
+                {
+                    _register.Add(coin);
+                }
+                else if (coin.Name == "Quarter")
+                {
+                    _register.Add(coin);
+                }
+            }
 
-            Nickel nickel = new Nickel();
-            _register.Add(nickel);
-
-
-
-            Dime dime = new Dime();
-            _register.Add(dime);
-
-
-
-            Quarter quarter = new Quarter();
-            _register.Add(quarter);
         }
-
     }
-
 }
 
 
